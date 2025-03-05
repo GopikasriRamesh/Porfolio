@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(34, 34, 62);
+    color: rgb(255, 229, 194);
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: rgb(255, 229, 194); 
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo.hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color:antiquewhite;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color:rgb(59, 59, 95);
+    border-bottom: 3px solid rgb(59, 59, 95);
+}
+
+@media(max-width:995px){
+    nav{
+        position:absolute;
+        display:none;
+        top:0;
+        right:0;
+        width:40%;
+        border-left: 3px solid rgb(59, 59, 95);
+        border-bottom:3px solid rgb(59, 59, 95);
+        border-bottom-left-radius: 2rem;
+        padding:1rem solid;
+        background-color:rgb(34, 34, 62) ;
+        border-top: 0.1rem solid rgb(66, 70, 138);
+    }
+
+nav.active{
+    display:block;
+}
+
+nav a{
+    display: block;
+    font-size: 2rem;
+    margin:3rem 0;
+}
+
+nav a:hover,
+nav a.active{
+    padding:1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem;
+}
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+
+.pic{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:8rem;
+    background-color:rgb(33, 33, 44);
+}
+
+.pic.my-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color:rgb(145, 145, 188)   
+}
+
+.my-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.pic-div{
+    border-radius: 50%;
+}
+
+.pic-div img{
+    position:relative;
+    width:32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.pic-div img:hover{
+    font-size: 1.8rem;
+    font-weight:500;
+}
+
+.icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border:0.2rem solid rgb(56, 56, 85) ;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+}
+
+.icons a:hover{
+    color:rgb(45, 45, 52);
+    transform: scale(1.3) transparent;
+    background-color: rgb(59, 59, 95);
+    box-shadow: 0  0 25px rgb(59, 59, 95);
+}
+
+.my-content {  
+    color: rgb(255, 229, 194);  
+    margin-bottom: 3rem; /* This provides space below the .my-content section */  
+}  
+
+.hire {  
+    display: block; /* Ensures button takes the full width if needed */  
+    margin-top: 2rem; /* Adjusts space between the text and button */  
+    padding: 1rem 2rem;  
+    font-size: 1.6rem;  
+    border: 2px solid rgb(255, 229, 194);  
+    color: rgb(255, 229, 194);  
+    cursor: pointer;  
+    transition: 0.3s ease;  
+}  
+
+.hire:hover {  
+    background-color: rgb(255, 229, 194);  
+    color: rgb(34, 34, 62);  
+}
+
+.text{
+    font-size:34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text span{
+    position:relative;
+}
+
+.text span::before{
+    content: "front-End Dev";
+    color:rgb(145, 145, 188) ;
+    animation: words 20s infinite;
+}
+
+
+@keyframes cursor{
+    to{
+        border-left:3px solid;
+    }
+}
+
+@media(max-width:1000px){
+    .pic{
+        gap:4rem;
+    }
+}
+
+@media(max-width:995px){
+    .pic{
+        flex-direction: column;
+        margin:5rem 4rem;
+    }
+}
+
+.pic.my-content h3{
+    font-size: 2.5 rem;
+
+}
+
+.pic.my-content h1{
+    font-size: 5 rem;
+}
+
+.pic-div img{
+    margin-top: 4%;
+}
